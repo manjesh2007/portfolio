@@ -44,7 +44,6 @@
             transition: var(--transition);
         }
 
-        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -117,11 +116,6 @@
             color: var(--text-primary);
             transition: var(--transition);
             box-shadow: 0 4px 15px var(--shadow);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 600;
-            font-size: 0.9rem;
         }
 
         .theme-toggle:hover {
@@ -131,11 +125,6 @@
             box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4);
         }
 
-        .theme-toggle i {
-            font-size: 1.1rem;
-        }
-
-        /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -176,7 +165,7 @@
             line-height: 1.2;
         }
 
-        .hero .gradient-text {
+        .gradient-text {
             background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary));
             -webkit-background-clip: text;
             background-clip: text;
@@ -249,7 +238,6 @@
             50% { transform: translateY(-30px) rotate(10deg); }
         }
 
-        /* Section Styles */
         section {
             padding: 6rem 5%;
             max-width: 1400px;
@@ -272,7 +260,6 @@
             font-size: 1.1rem;
         }
 
-        /* About Section */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 2fr;
@@ -281,15 +268,13 @@
         }
 
         .about-image {
-            position: relative;
+            width: 100%;
+            max-width: 550px;
+            aspect-ratio: 1;
         }
 
-        .profile-img {
-            width: 100%;
-            max-width: 350px;
-            aspect-ratio: 1;
+         .profile-img {
             border-radius: 20px;
-            object-fit: cover;
             box-shadow: 0 20px 60px var(--shadow);
             border: 3px solid var(--accent-primary);
         }
@@ -303,7 +288,7 @@
         .about-text p {
             color: var(--text-secondary);
             line-height: 1.8;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .software-logos {
@@ -331,7 +316,6 @@
             box-shadow: 0 10px 30px var(--shadow);
         }
 
-        /* Skills Section */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -378,9 +362,9 @@
             background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
             border-radius: 10px;
             transition: width 1s ease;
+            width: 0;
         }
 
-        /* Portfolio Section */
         .portfolio-filters {
             display: flex;
             justify-content: center;
@@ -462,7 +446,6 @@
             font-weight: 500;
         }
 
-        /* Services Section */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -500,7 +483,6 @@
             line-height: 1.6;
         }
 
-        /* Testimonials Section */
         .testimonials-slider {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -553,7 +535,6 @@
             font-size: 0.9rem;
         }
 
-        /* Contact Section */
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -573,7 +554,7 @@
         .contact-info p {
             color: var(--text-secondary);
             line-height: 1.8;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .social-links {
@@ -594,6 +575,7 @@
             font-size: 1.3rem;
             transition: var(--transition);
             box-shadow: 0 5px 20px var(--shadow);
+            text-decoration: none;
         }
 
         .social-link:hover {
@@ -642,7 +624,6 @@
             resize: vertical;
         }
 
-        /* Footer */
         footer {
             background: var(--bg-secondary);
             padding: 3rem 5%;
@@ -678,7 +659,6 @@
             margin-top: 2rem;
         }
 
-        /* Stats Section */
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -708,7 +688,6 @@
             margin-top: 0.5rem;
         }
 
-        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -716,7 +695,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.95);
             z-index: 2000;
             align-items: center;
             justify-content: center;
@@ -731,7 +710,7 @@
             background: var(--bg-card);
             padding: 2rem;
             border-radius: 20px;
-            max-width: 900px;
+            max-width: 1000px;
             width: 100%;
             position: relative;
         }
@@ -745,6 +724,7 @@
             border: none;
             color: var(--text-primary);
             cursor: pointer;
+            z-index: 1;
         }
 
         .video-container {
@@ -753,7 +733,7 @@
             height: 0;
             overflow: hidden;
             border-radius: 10px;
-            margin-bottom: 1rem;
+            margin-top: 1rem;
         }
 
         .video-container iframe {
@@ -764,7 +744,6 @@
             height: 100%;
         }
 
-        /* Mobile Menu */
         .mobile-menu-toggle {
             display: none;
             background: none;
@@ -774,7 +753,44 @@
             cursor: pointer;
         }
 
-        /* Responsive */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--accent-primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         @media (max-width: 768px) {
             .nav-links {
                 position: fixed;
@@ -805,58 +821,13 @@
                 grid-template-columns: 1fr;
             }
 
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
             section {
                 padding: 4rem 5%;
             }
         }
-
-        /* Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Scroll to top button */
-        .scroll-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 50px;
-            height: 50px;
-            background: var(--accent-primary);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            font-size: 1.5rem;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-            z-index: 999;
-        }
-
-        .scroll-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .scroll-top:hover {
-            transform: translateY(-5px);
-        }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="nav-container">
             <div class="logo">Manjesh</div>
@@ -879,7 +850,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-bg"></div>
         <i class="fas fa-video floating-icon" style="top: 10%; left: 10%;"></i>
@@ -895,7 +865,6 @@
         </div>
     </section>
 
-    <!-- Stats Section -->
     <section>
         <div class="stats-grid fade-in">
             <div class="stat-card">
@@ -917,67 +886,78 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="section-header fade-in">
-            <h2>About Me</h2>
-            <p>Get to know the creative mind behind the edits</p>
-        </div>
-        <div class="about-content fade-in">
-            <div class="about-image">
-                <div class="profile-img" style="background: linear-gradient(135deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; font-size: 8rem; color: white;">
-                    <i class="fas fa-user-circle"></i>
-                </div>
-            </div>
-            <div class="about-text">
-                <h3>Crafting Visual Stories Since 2021</h3>
-                <p>I'm a professional video editor specializing in cinematic storytelling, dynamic transitions, and immersive sound design. With over 5 years of experience, I've worked with YouTubers, brands, and filmmakers to create compelling visual narratives that engage and inspire.</p>
-                <p>My expertise spans from YouTube content optimization to cinematic short films, always focusing on color grading, motion graphics, and seamless editing that elevates every frame.</p>
-                <a href="#" class="btn btn-primary" style="display: inline-block; margin-top: 1rem;">
-                    <i class="fas fa-download"></i> Download Resume
-                </a>
-                <div class="software-logos">
-                    <div class="software-logo" title="Adobe Premiere Pro"><i class="fas fa-film"></i></div>
-                    <div class="software-logo" title="After Effects"><i class="fas fa-layer-group"></i></div>
-                    <div class="software-logo" title="DaVinci Resolve"><i class="fas fa-palette"></i></div>
-                    <div class="software-logo" title="Final Cut Pro"><i class="fas fa-cut"></i></div>
-                    <div class="software-logo" title="Adobe Audition"><i class="fas fa-volume-up"></i></div>
-                </div>
+   <section id="about">
+    <div class="section-header fade-in">
+        <h2>About Me</h2>
+        <p>Get to know the creative mind behind the edits</p>
+    </div>
+    <div class="about-content fade-in">
+        <div class="about-image">
+            <div class="profile-img-container">
+               <div class="profile-img profile-img-default" style="background-image: url('https://i.ibb.co/qYsKrsxk/1760463372235-2-1.jpg'); background-size: cover; background-position: center;"></div>
+                <div class="profile-img profile-img-hover" style="background-image: url('https://i.ibb.co/qM7FzRTq/Gemini-Generated-Image-unbk9hunbk9hunbk-1.jpg'); background-size: cover; background-position: center;"></div>
             </div>
         </div>
-    </section>
+        <div class="about-text">
+            <h3>Crafting Visual Stories Since 2021</h3>
+            <p>I'm a professional video editor specializing in cinematic storytelling, dynamic transitions, and immersive sound design. With over 5 years of experience, I've worked with YouTubers, brands, and filmmakers to create compelling visual narratives that engage and inspire.</p>
+            <p>My expertise spans from YouTube content optimization to cinematic short films, always focusing on color grading, motion graphics, and seamless editing that elevates every frame.</p>
+            <a href="#" class="btn btn-primary" style="display: inline-block; margin-top: 1rem;">
+                <i class="fas fa-download"></i> Download Resume
+            </a>
+            <div class="software-logos">
+                <div class="software-logo" title="Adobe Premiere Pro"><i class="fas fa-film"></i></div>
+                <div class="software-logo" title="After Effects"><i class="fas fa-layer-group"></i></div>
+                <div class="software-logo" title="DaVinci Resolve"><i class="fas fa-palette"></i></div>
+                <div class="software-logo" title="Final Cut Pro"><i class="fas fa-cut"></i></div>
+                <div class="software-logo" title="Adobe Audition"><i class="fas fa-volume-up"></i></div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Skills Section -->
+<style>
+.profile-img-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.profile-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    transition: opacity 0.4s ease;
+}
+
+.profile-img-default {
+    opacity: 1;
+    z-index: 2;
+}
+
+.profile-img-hover {
+    opacity: 0;
+    z-index: 1;
+}
+
+.profile-img-container:hover .profile-img-default {
+    opacity: 0;
+}
+
+.profile-img-container:hover .profile-img-hover {
+    opacity: 1;
+}
+</style>
     <section id="skills">
         <div class="section-header fade-in">
             <h2>My Skills</h2>
             <p>Expertise that brings your vision to life</p>
         </div>
         <div class="skills-grid">
-            <div class="skill-card fade-in">
-                <i class="fas fa-video skill-icon"></i>
-                <h3>Video Editing</h3>
-                <p>Professional editing with seamless cuts, pacing, and storytelling</p>
-                <div class="skill-progress">
-                    <div class="skill-progress-bar" data-width="95"></div>
-                </div>
-            </div>
-            <div class="skill-card fade-in">
-                <i class="fas fa-magic skill-icon"></i>
-                <h3>Motion Graphics</h3>
-                <p>Dynamic animations and eye-catching visual effects</p>
-                <div class="skill-progress">
-                    <div class="skill-progress-bar" data-width="90"></div>
-                </div>
-            </div>
-            <div class="skill-card fade-in">
-                <i class="fas fa-palette skill-icon"></i>
-                <h3>Color Grading</h3>
-                <p>Cinematic color correction and professional grading</p>
-                <div class="skill-progress">
-                    <div class="skill-progress-bar" data-width="88"></div>
-                </div>
-            </div>
             <div class="skill-card fade-in">
                 <i class="fas fa-volume-up skill-icon"></i>
                 <h3>Sound Design</h3>
@@ -1005,7 +985,6 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
     <section id="portfolio">
         <div class="section-header fade-in">
             <h2>My Work</h2>
@@ -1019,48 +998,48 @@
             <button class="filter-btn" data-filter="reels">Reels</button>
         </div>
         <div class="portfolio-grid">
-            <div class="portfolio-item fade-in" data-category="cinematic" onclick="openModal('www.youtube.com/watch?v=3Ki45n-qm_U&list=RD3Ki45n-qm_U&start_radio=1')">
-                <div class="portfolio-thumbnail" style="background: linear-gradient(135deg, #667eea, #764ba2);"></div>
+<div class="portfolio-item fade-in" data-category="cinematic" onclick="openModal('https://www.youtube.com/watch?v=79tNuLWh_Cg', 'Urban Dreams', 'A cinematic journey through city lights and dreams')">
+                <img class="portfolio-thumbnail" src="https://img.youtube.com/vi/79tNuLWh_Cg/maxresdefault.jpg" alt="Urban Dreams" loading="lazy">
                 <div class="portfolio-overlay">
                     <h3>Urban Dreams</h3>
                     <p class="portfolio-category">Short Film</p>
                     <p>A cinematic journey through city lights and dreams</p>
                 </div>
             </div>
-            <div class="portfolio-item fade-in" data-category="youtube" onclick="openModal('project2')">
-                <div class="portfolio-thumbnail" style="background: linear-gradient(135deg, #f093fb, #f5576c);"></div>
+            <div class="portfolio-item fade-in" data-category="youtube" onclick="openModal('https://www.youtube.com/watch?v=0UAvxcvHhwE', 'Tech Review Series', 'Dynamic tech reviews with motion graphics')">
+                <img class="portfolio-thumbnail" src="https://img.youtube.com/vi/0UAvxcvHhwE/maxresdefault.jpg" alt="Tech Review Series" loading="lazy">
                 <div class="portfolio-overlay">
                     <h3>Tech Review Series</h3>
                     <p class="portfolio-category">YouTube Content</p>
                     <p>Dynamic tech reviews with motion graphics</p>
                 </div>
             </div>
-            <div class="portfolio-item fade-in" data-category="brand" onclick="openModal('project3')">
-                <div class="portfolio-thumbnail" style="background: linear-gradient(135deg, #4facfe, #00f2fe);"></div>
+            <div class="portfolio-item fade-in" data-category="brand" onclick="openModal('https://www.youtube.com/watch?v=xwArFPym63g', 'Brand Launch Campaign', 'High-energy promotional video for product launch')">
+                <img class="portfolio-thumbnail" src="https://img.youtube.com/vi/xwArFPym63g/maxresdefault.jpg" alt="Brand Launch Campaign" loading="lazy">
                 <div class="portfolio-overlay">
                     <h3>Brand Launch Campaign</h3>
                     <p class="portfolio-category">Commercial</p>
                     <p>High-energy promotional video for product launch</p>
                 </div>
             </div>
-            <div class="portfolio-item fade-in" data-category="reels" onclick="openModal('project4')">
-                <div class="portfolio-thumbnail" style="background: linear-gradient(135deg, #fa709a, #fee140);"></div>
+            <div class="portfolio-item fade-in" data-category="reels" onclick="openModal('https://www.youtube.com/watch?v=KTS9lZaTtCk', 'Travel Reels Collection', 'Engaging travel content optimized for social media')">
+                <img class="portfolio-thumbnail" src="https://img.youtube.com/vi/KTS9lZaTtCk/maxresdefault.jpg" alt="Travel Reels Collection" loading="lazy">
                 <div class="portfolio-overlay">
                     <h3>Travel Reels Collection</h3>
                     <p class="portfolio-category">Instagram Reels</p>
                     <p>Engaging travel content optimized for social media</p>
                 </div>
             </div>
-            <div class="portfolio-item fade-in" data-category="cinematic" onclick="openModal('project5')">
-                <div class="portfolio-thumbnail" style="background: linear-gradient(135deg, #30cfd0, #330867);"></div>
+            <div class="portfolio-item fade-in" data-category="cinematic" onclick="openModal('https://www.youtube.com/watch?v=79tNuLWh_Cg', 'Music Video - Neon Nights', 'Stylized music video with VFX and color grading')">
+                <img class="portfolio-thumbnail" src="https://img.youtube.com/vi/79tNuLWh_Cg/maxresdefault.jpg" alt="Music Video - Neon Nights" loading="lazy">
                 <div class="portfolio-overlay">
                     <h3>Music Video - Neon Nights</h3>
                     <p class="portfolio-category">Music Video</p>
                     <p>Stylized music video with VFX and color grading</p>
                 </div>
             </div>
-            <div class="portfolio-item fade-in" data-category="youtube" onclick="openModal('project6')">
-                <div class="portfolio-thumbnail" style="background: linear-gradient(135deg, #a8edea, #fed6e3);"></div>
+            <div class="portfolio-item fade-in" data-category="youtube" onclick="openModal('https://www.youtube.com/watch?v=0UAvxcvHhwE', 'Vlog Series', 'Fast-paced lifestyle vlog with trendy transitions')">
+                <img class="portfolio-thumbnail" src="https://img.youtube.com/vi/0UAvxcvHhwE/maxresdefault.jpg" alt="Vlog Series" loading="lazy">
                 <div class="portfolio-overlay">
                     <h3>Vlog Series</h3>
                     <p class="portfolio-category">YouTube Vlog</p>
@@ -1070,7 +1049,6 @@
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services">
         <div class="section-header fade-in">
             <h2>Services</h2>
@@ -1113,7 +1091,6 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
     <section id="testimonials">
         <div class="section-header fade-in">
             <h2>Client Testimonials</h2>
@@ -1122,7 +1099,7 @@
         <div class="testimonials-slider">
             <div class="testimonial-card fade-in">
                 <i class="fas fa-quote-right quote-icon"></i>
-                <p class="testimonial-text">"Alex transformed our YouTube channel completely. The editing is top-notch, and our viewer retention has increased by 40%. Highly recommend!"</p>
+                <p class="testimonial-text">"Manjesh transformed our YouTube channel completely. The editing is top-notch, and our viewer retention has increased by 40%. Highly recommend!"</p>
                 <div class="client-info">
                     <div class="client-avatar"></div>
                     <div>
@@ -1133,7 +1110,7 @@
             </div>
             <div class="testimonial-card fade-in">
                 <i class="fas fa-quote-right quote-icon"></i>
-                <p class="testimonial-text">"Working with Alex was seamless. The cinematic quality and attention to detail in our brand video exceeded all expectations. A true professional!"</p>
+                <p class="testimonial-text">"Working with Manjesh was seamless. The cinematic quality and attention to detail in our brand video exceeded all expectations. A true professional!"</p>
                 <div class="client-info">
                     <div class="client-avatar"></div>
                     <div>
@@ -1144,7 +1121,7 @@
             </div>
             <div class="testimonial-card fade-in">
                 <i class="fas fa-quote-right quote-icon"></i>
-                <p class="testimonial-text">"The music video Alex edited for me was absolutely stunning. The color grading and effects were perfect. Can't wait to work together again!"</p>
+                <p class="testimonial-text">"The music video Manjesh edited for me was absolutely stunning. The color grading and effects were perfect. Can't wait to work together again!"</p>
                 <div class="client-info">
                     <div class="client-avatar"></div>
                     <div>
@@ -1156,7 +1133,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
         <div class="section-header fade-in">
             <h2>Let's Collaborate</h2>
@@ -1197,7 +1173,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-links">
@@ -1221,12 +1196,10 @@
         </div>
     </footer>
 
-    <!-- Scroll to Top Button -->
     <button class="scroll-top" onclick="scrollToTop()">
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- Modal -->
     <div class="modal" id="videoModal">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal()">&times;</button>
@@ -1239,7 +1212,6 @@
     </div>
 
     <script>
-        // Theme Toggle
         function toggleTheme() {
             const body = document.body;
             const themeIcon = document.querySelector('.theme-toggle i');
@@ -1254,13 +1226,11 @@
             }
         }
 
-        // Mobile Menu Toggle
         function toggleMobileMenu() {
             const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('active');
         }
 
-        // Smooth Scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -1272,7 +1242,6 @@
             });
         });
 
-        // Scroll Animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -100px 0px'
@@ -1288,7 +1257,6 @@
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-        // Stats Counter Animation
         function animateCounter(element) {
             const target = parseInt(element.getAttribute('data-target'));
             const duration = 2000;
@@ -1319,7 +1287,6 @@
 
         document.querySelectorAll('.stat-number').forEach(el => statsObserver.observe(el));
 
-        // Skill Progress Animation
         const skillObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1332,7 +1299,6 @@
 
         document.querySelectorAll('.skill-progress-bar').forEach(el => skillObserver.observe(el));
 
-        // Portfolio Filter
         const filterButtons = document.querySelectorAll('.filter-btn');
         const portfolioItems = document.querySelectorAll('.portfolio-item');
 
@@ -1355,9 +1321,21 @@
             });
         });
 
-        // Modal Functions
-        function openModal(projectId) {
+        function openModal(videoUrl, title, description) {
             const modal = document.getElementById('videoModal');
+            const modalVideo = document.getElementById('modalVideo');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDescription = document.getElementById('modalDescription');
+            
+            let embedUrl = videoUrl;
+            if (videoUrl.includes('youtube.com/watch')) {
+                const videoId = videoUrl.split('v=')[1].split('&')[0];
+                embedUrl = `https://www.youtube.com/embed/${videoId}`;
+            }
+            
+            modalVideo.src = embedUrl;
+            modalTitle.textContent = title;
+            modalDescription.textContent = description;
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
@@ -1369,26 +1347,22 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Close modal on outside click
         document.getElementById('videoModal').addEventListener('click', (e) => {
             if (e.target.id === 'videoModal') {
                 closeModal();
             }
         });
 
-        // Form Submission
         function handleSubmit(e) {
             e.preventDefault();
             alert('Thank you for your message! I will get back to you soon.');
             e.target.reset();
         }
 
-        // Scroll to Top
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // Show/Hide Scroll to Top Button
         window.addEventListener('scroll', () => {
             const scrollBtn = document.querySelector('.scroll-top');
             if (window.scrollY > 500) {
@@ -1398,7 +1372,6 @@
             }
         });
 
-        // Nav Background on Scroll
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('nav');
             if (window.scrollY > 100) {
@@ -1409,5 +1382,29 @@
         });
     </script>
 </body>
-
 </html>
+                <i class="fas fa-video skill-icon"></i>
+                <h3>Video Editing</h3>
+                <p>Professional editing with seamless cuts, pacing, and storytelling</p>
+                <div class="skill-progress">
+                    <div class="skill-progress-bar" data-width="95"></div>
+                </div>
+            </div>
+            <div class="skill-card fade-in">
+                <i class="fas fa-magic skill-icon"></i>
+                <h3>Motion Graphics</h3>
+                <p>Dynamic animations and eye-catching visual effects</p>
+                <div class="skill-progress">
+                    <div class="skill-progress-bar" data-width="90"></div>
+                </div>
+            </div>
+            <div class="skill-card fade-in">
+                <i class="fas fa-palette skill-icon"></i>
+                <h3>Color Grading</h3>
+                <p>Cinematic color correction and professional grading</p>
+                <div class="skill-progress">
+                    <div class="skill-progress-bar" data-width="88"></div>
+                </div>
+            </div>
+            <div class="skill-card fade-in">
+
